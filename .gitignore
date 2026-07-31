@@ -1,10 +1,4 @@
-# Criar/editar .gitignore
-echo "node_modules/
+﻿node_modules/
 .env
-.env.local
-.env.*.local
-logs/
-*.log
-.vscode/
-.idea/" > .gitignore"node_modules/" 
-"node_modules/" 
+.env*
+!.env.example

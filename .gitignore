@@ -6,4 +6,5 @@ echo "node_modules/
 logs/
 *.log
 .vscode/
-.idea/" > .gitignore
+.idea/" > .gitignore"node_modules/" 
+"node_modules/" 

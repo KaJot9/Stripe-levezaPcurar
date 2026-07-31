@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Assine seu plano</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>Escolha seu plano</h1>
+      <p>Pagamento seguro via Stripe. Acesso liberado automaticamente após a confirmação.</p>
+    </header>
+
+    <section id="planos" class="planos-grid">
+      <p class="loading">Carregando planos...</p>
+    </section>
+
+    <div id="email-modal" class="modal hidden">
+      <div class="modal-box">
+        <h2>Quase lá!</h2>
+        <p>Informe seu e-mail para receber o link do grupo após o pagamento.</p>
+        <input id="email-input" type="email" placeholder="seuemail@exemplo.com" />
+        <p id="email-erro" class="erro hidden"></p>
+        <div class="modal-actions">
+          <button id="btn-cancelar" class="btn secundario">Cancelar</button>
+          <button id="btn-continuar" class="btn primario">Continuar para pagamento</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Login — Painel Admin</title>
+  <%- include('../partials/head') %>
+</head>
+<body class="admin-login-body">
+  <form class="admin-login-box" method="POST" action="/admin/login">
+    <h1>Painel Administrativo</h1>
+    <% if (erro) { %>
+      <p class="erro"><%= erro %></p>
+    <% } %>
+    <label>E-mail</label>
+    <input type="email" name="email" required />
+    <label>Senha</label>
+    <input type="password" name="senha" required />
+    <button class="btn primario" type="submit">Entrar</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Clientes — Painel Admin</title>
+  <%- include('../partials/head') %>
+</head>
+<body>
+  <%- include('../partials/nav') %>
+
+  <main class="admin-container">
+    <div class="admin-header-row">
+      <h1>Clientes</h1>
+      <input id="busca-cliente" type="text" placeholder="Buscar por nome ou e-mail..." class="busca-input" />
+    </div>
+
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>E-mail</th>
+          <th>Plano</th>
+          <th>Status</th>
+          <th>Assinado em</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-clientes">
+        <tr><td colspan="5">Carregando...</td></tr>
+      </tbody>
+    </table>
+
+    <div id="paginacao" class="paginacao"></div>
+  </main>
+
+  <script src="/js/admin/customers.js"></script>
+</body>
+</html>

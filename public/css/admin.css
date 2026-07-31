@@ -1,0 +1,74 @@
+:root {
+  --bg: #0b0f19;
+  --card: #131a2a;
+  --border: #232c40;
+  --text: #e7ecf7;
+  --muted: #94a3b8;
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+
+.admin-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 32px; border-bottom: 1px solid var(--border); background: var(--card);
+}
+.admin-nav-brand { font-weight: 700; }
+.admin-nav-links { display: flex; gap: 20px; }
+.admin-nav-links a { color: var(--muted); text-decoration: none; }
+.admin-nav-links a:hover { color: var(--text); }
+
+.admin-container { max-width: 1100px; margin: 0 auto; padding: 32px; }
+.admin-header-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.card-stat { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+.card-stat .valor { font-size: 1.8rem; font-weight: 700; margin-top: 6px; }
+.card-stat .label { color: var(--muted); font-size: 0.85rem; }
+
+.admin-table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.admin-table th, .admin-table td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+.admin-table th { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; }
+
+.badge { padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
+.badge.ativa { background: rgba(34,197,94,0.15); color: var(--success); }
+.badge.pendente { background: rgba(245,158,11,0.15); color: var(--warning); }
+.badge.inadimplente { background: rgba(245,158,11,0.15); color: var(--warning); }
+.badge.cancelada { background: rgba(239,68,68,0.15); color: var(--danger); }
+
+.btn { border: none; border-radius: 10px; padding: 10px 16px; font-size: 0.9rem; cursor: pointer; }
+.btn.primario { background: var(--primary); color: #fff; }
+.btn.primario:hover { background: var(--primary-hover); }
+.btn.secundario { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.btn.pequeno { padding: 6px 10px; font-size: 0.8rem; margin-right: 6px; }
+.btn.perigo { background: rgba(239,68,68,0.15); color: var(--danger); }
+
+.busca-input, .admin-login-box input, .modal-box input {
+  padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--bg); color: var(--text); width: 100%;
+}
+
+.admin-login-body { display: flex; align-items: center; justify-content: center; height: 100vh; }
+.admin-login-box { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; width: 340px; display: flex; flex-direction: column; gap: 10px; }
+.admin-login-box label { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; }
+.modal.hidden { display: none; }
+.modal-box { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 28px; width: 90%; max-width: 420px; max-height: 90vh; overflow-y: auto; }
+.modal-box form { display: flex; flex-direction: column; gap: 6px; }
+.modal-box label { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+.checkbox-label { display: flex; align-items: center; gap: 8px; flex-direction: row; }
+.checkbox-label input { width: auto; }
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 18px; }
+
+.erro { color: var(--danger); font-size: 0.85rem; }
+.hidden { display: none; }
+
+.paginacao { display: flex; gap: 8px; justify-content: center; margin-top: 20px; }
+.paginacao button { background: var(--card); border: 1px solid var(--border); color: var(--text); padding: 6px 12px; border-radius: 8px; cursor: pointer; }
+.paginacao button.ativo { background: var(--primary); border-color: var(--primary); }
